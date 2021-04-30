@@ -4,9 +4,9 @@ set -Ceu
 cat << EOS
     
 Usage:
-    $0 [doc type]
+   `basename $0` [doc type]
     
-    doc type: ar (article), book
+        doc type: ar (article), book
 
 EOS
 
