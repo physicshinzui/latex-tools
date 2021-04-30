@@ -1,0 +1,24 @@
+#!/bin/bash
+set -Ceu
+
+cat << EOS
+    
+Usage:
+    $0 [doc type]
+    
+    doc type: ar (article), book
+
+EOS
+
+TEMPLATES=/Users/siida/Dropbox/01code/software/myTools/latex/TEMPLATES
+
+doc_type=$1
+if [ $doc_type == "ar" ]; then
+    cp ${TEMPLATES}/template_article.tex ${PWD}/article.tex
+    echo "~article.tex was created~"
+
+elif [ $doc_type == "book" ]; then
+    cp ${TEMPLATES}/template_book.tex ${PWD}/book.tex
+    echo "~book.tex was created~"
+
+fi

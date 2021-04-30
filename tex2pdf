@@ -1,0 +1,9 @@
+#!/bin/bash
+Set -eu
+cat<<EOS
+Author: Shinji Iida
+This script convert *.tex into *.pdf
+
+EOS
+TEX_FILE=$1
+latex ${TEX_FILE} ; pdflatex ${TEX_FILE}
