@@ -10,15 +10,15 @@ Usage:
 
 EOS
 
-TEMPLATES=/Users/siida/Dropbox/01code/software/myTools/latex/TEMPLATES
+TEMPLATE_DB=/Users/siida/Dropbox/01code/software/myTools/latex/templates
 
 doc_type=$1
 if [ $doc_type == "ar" ]; then
-    cp ${TEMPLATES}/template_article.tex ${PWD}/article.tex
+    cp ${TEMPLATE_DB}/template_article.tex ${PWD}/article.tex
     echo "~article.tex was created~"
 
 elif [ $doc_type == "book" ]; then
-    cp ${TEMPLATES}/template_book.tex ${PWD}/book.tex
+    cp ${TEMPLATE_DB}/template_book.tex ${PWD}/book.tex
     echo "~book.tex was created~"
 
 fi
