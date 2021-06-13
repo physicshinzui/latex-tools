@@ -4,21 +4,23 @@ set -Ceu
 cat << EOS
     
 Usage:
-   `basename $0` [doc type]
+   `basename $0` [doc type] [project_name]
     
-        doc type: ar (article), book
+        doc type     : ar (article), book
+        project_name : project_name.tex 
 
 EOS
 
 TEMPLATE_DB=/Users/siida/Dropbox/01code/software/myTools/latex/templates
 
 doc_type=$1
+name=$2
 if [ $doc_type == "ar" ]; then
-    cp ${TEMPLATE_DB}/template_article.tex ${PWD}/article.tex
-    echo "~article.tex was created~"
+    cp ${TEMPLATE_DB}/template_article.tex ${PWD}/${name}.tex
+    echo "~${name}.tex was created~"
 
 elif [ $doc_type == "book" ]; then
-    cp ${TEMPLATE_DB}/template_book.tex ${PWD}/book.tex
-    echo "~book.tex was created~"
+    cp ${TEMPLATE_DB}/template_book.tex ${PWD}/${name}.tex
+    echo "~${name}.tex was created~"
 
 fi

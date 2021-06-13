@@ -7,3 +7,4 @@ This script convert *.tex into *.pdf
 EOS
 TEX_FILE=$1
 latex ${TEX_FILE} ; pdflatex ${TEX_FILE}
+open ${TEX_FILE%.*}.pdf
